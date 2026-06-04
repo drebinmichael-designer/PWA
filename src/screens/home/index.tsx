@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useCallback } from "react";
 import "./HomeScreen.css";
 import type { ScreenProps } from "../../router/types";
 import { ICONS } from "../../config/icons.registry";
@@ -53,12 +53,16 @@ const RECENT_TASKS = [
 export default function HomeScreen({ dispatch }: ScreenProps) {
   const [favExpanded, setFavExpanded] = useState(true);
   const [recExpanded, setRecExpanded] = useState(true);
+  const [scrolled, setScrolled] = useState(false);
+  const onScroll = useCallback((e: React.UIEvent<HTMLDivElement>) => {
+    setScrolled((e.currentTarget.scrollTop ?? 0) > 0);
+  }, []);
 
   return (
     <div className="hs">
 
       {/* ── Sticky top bar (аватар + поиск) ─────────────────────────────── */}
-      <div className="hs-top-row">
+      <div className={`hs-top-row${scrolled ? " hs-top-row--scrolled" : ""}`}>
         <img className="hs-avatar" src={AVATARS.currentUser} alt="Аватар" />
         <button
           className="hs-search-btn"
@@ -70,7 +74,7 @@ export default function HomeScreen({ dispatch }: ScreenProps) {
       </div>
 
       {/* ── Скролл-контейнер (пространства + виджеты) ───────────────────── */}
-      <div className="hs-content">
+      <div className="hs-content" onScroll={onScroll}>
 
         {/* Пространства — скроллятся вместе с контентом */}
         <div className="hs-header-scrollable">

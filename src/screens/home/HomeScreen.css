@@ -31,7 +31,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background: linear-gradient(128deg, #b5d7fe 0%, #eef4fd 100%);
+  background: linear-gradient(128deg, rgba(181,215,254,0.45) 0%, rgba(238,244,253,0.45) 100%);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -46,8 +46,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 16px 0;
+  padding: 12px 16px;
   background: transparent;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+/* При скролле — белая шапка с тенью */
+.hs-top-row--scrolled {
+  background: rgba(255,255,255,1);
+  box-shadow: 0px 1px 0px 0px rgba(68,83,113,0.08),
+              0px 2px 8px 0px rgba(68,83,113,0.1);
+}
+
+/* Кнопка поиска — surface2 при скролле */
+.hs-top-row--scrolled .hs-search-btn {
+  background: rgba(241,243,249,1);
 }
 
 /* ── Скроллируемая часть шапки (пространства) ────────────────────────────── */

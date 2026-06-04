@@ -171,7 +171,7 @@ export default function AllTasksScreen({ dispatch }: ScreenProps) {
       {/* ── TabBar ── */}
       <div className="at-tabbar">
         <button className="at-tab" onClick={() => dispatch({ type: "tab_switch", to: "home" })}>
-          <img className="at-tab-icon at-tab-icon--inactive" src={ICONS.actionHome} alt="" />
+          <img className="at-tab-icon at-tab-icon--inactive" src={ICONS.actionHomeFill} alt="" />
           <span className="at-tab-label at-tab-label--inactive">Главная</span>
         </button>
         <button className="at-tab" onClick={() => dispatch({ type: "tab_switch", to: "all-tasks" })}>

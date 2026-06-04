@@ -138,7 +138,7 @@ export default function AllSpacesScreen({ dispatch }: ScreenProps) {
       {/* ── TabBar ── */}
       <div className="asp-tabbar">
         <button className="asp-tab" onClick={() => dispatch({ type: "tab_switch", to: "home" })}>
-          <img className="asp-tab-icon asp-tab-icon--inactive" src={ICONS.actionHome} alt="" />
+          <img className="asp-tab-icon asp-tab-icon--inactive" src={ICONS.actionHomeFill} alt="" />
           <span className="asp-tab-label asp-tab-label--inactive">Главная</span>
         </button>
         <button className="asp-tab" onClick={() => dispatch({ type: "tab_switch", to: "all-tasks" })}>

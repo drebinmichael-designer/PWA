@@ -24,7 +24,7 @@ export default function LoginScreen({ dispatch }: ScreenProps) {
       {/* Inputs */}
       <div style={s.form}>
         {/* Login */}
-        <div style={{ ...s.inputWrap, borderColor: loginFocus ? "rgba(0,85,255,1)" : "rgba(208,212,220,1)" }}>
+        <div style={{ ...s.inputWrap, borderColor: loginFocus ? "rgba(0,85,255,1)" : "rgba(68,83,113,0.1)" }}>
           <span style={s.inputLabel}>Логин</span>
           <input
             style={s.input}
@@ -39,7 +39,7 @@ export default function LoginScreen({ dispatch }: ScreenProps) {
         </div>
 
         {/* Password */}
-        <div style={{ ...s.inputWrap, borderColor: passFocus ? "rgba(0,85,255,1)" : "rgba(208,212,220,1)" }}>
+        <div style={{ ...s.inputWrap, borderColor: passFocus ? "rgba(0,85,255,1)" : "rgba(68,83,113,0.1)" }}>
           <span style={s.inputLabel}>Пароль</span>
           <div style={s.inputRow}>
             <input
@@ -92,9 +92,11 @@ const s: Record<string, React.CSSProperties> = {
   },
   form: { width: "100%", display: "flex", flexDirection: "column", gap: 8, marginBottom: 16 },
   inputWrap: {
-    width: "100%", borderRadius: 10, border: "1.5px solid",
-    background: "rgba(255,255,255,1)", padding: "10px 14px",
-    display: "flex", flexDirection: "column", gap: 2,
+    width: "100%", height: 56, borderRadius: 14,
+    border: "1px solid rgba(68,83,113,0.1)",
+    background: "rgba(68,83,113,0.05)",
+    padding: "0 12px",
+    display: "flex", flexDirection: "column", justifyContent: "center", gap: 4,
     boxSizing: "border-box",
   },
   inputLabel: {
