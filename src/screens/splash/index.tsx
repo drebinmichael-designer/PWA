@@ -4,7 +4,7 @@ import type { ScreenProps } from "../../router/types";
 export default function SplashScreen(_: ScreenProps) {
   return (
     <div style={s.root}>
-      <img src="/assets/avatar-user.svg" alt="Yaga" style={s.logo} />
+      <img src={`${import.meta.env.BASE_URL}assets/avatar-user.svg`} alt="Yaga" style={s.logo} />
     </div>
   );
 }

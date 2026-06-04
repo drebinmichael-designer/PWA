@@ -16,7 +16,7 @@ export default function LoginScreen({ dispatch }: ScreenProps) {
   return (
     <div style={s.root}>
       {/* Logo */}
-      <img src="/assets/avatar-user.svg" alt="Yaga" style={s.logo} />
+      <img src={`${import.meta.env.BASE_URL}assets/avatar-user.svg`} alt="Yaga" style={s.logo} />
 
       {/* Title */}
       <h1 style={s.title}>Добро пожаловать</h1>

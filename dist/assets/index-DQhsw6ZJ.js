@@ -1,1 +1,0 @@
-import{j as t}from"./index-jV3l-bke.js";function o(s){return t.jsx("div",{style:e.root,children:t.jsx("img",{src:"/assets/avatar-user.svg",alt:"Yaga",style:e.logo})})}const e={root:{width:"100%",height:"100%",display:"flex",alignItems:"center",justifyContent:"center",background:"rgba(255,255,255,1)"},logo:{width:80,height:80}};export{o as default};
