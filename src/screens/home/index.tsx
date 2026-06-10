@@ -125,7 +125,7 @@ export default function HomeScreen({ dispatch }: ScreenProps) {
           <div className="hs-widget-header">
             <div className="hs-widget-header-left">
               <img
-                className="hs-widget-icon hs-widget-icon--warning"
+                className="hs-widget-icon hs-widget-icon--muted"
                 src={ICONS.ratingStarFill}
                 alt=""
               />
@@ -177,7 +177,7 @@ export default function HomeScreen({ dispatch }: ScreenProps) {
             <div className="hs-widget-header-left">
               <img
                 className="hs-widget-icon hs-widget-icon--muted"
-                src={ICONS.organizeHistory}
+                src={ICONS.organizeTimeFill}
                 alt=""
               />
               <span className="hs-widget-title">Недавние</span>
