@@ -3,8 +3,8 @@ import type { ScreenProps } from "../../router/types";
 import { ICONS } from "../../config/icons.registry";
 
 export default function LoginScreen({ dispatch }: ScreenProps) {
-  const [login, setLogin]       = useState("");
-  const [password, setPassword] = useState("");
+  const [login, setLogin]       = useState("test@test.ru");
+  const [password, setPassword] = useState("111111");
   const [showPass, setShowPass] = useState(false);
   const [loginFocus, setLoginFocus] = useState(false);
   const [passFocus,  setPassFocus]  = useState(false);
