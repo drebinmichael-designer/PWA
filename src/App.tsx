@@ -2,7 +2,7 @@ import { Suspense, lazy, useEffect, useRef, useState } from "react";
 import { AppRouter, useRouter } from "./router/AppRouter";
 import { SCREENS } from "./config/screens.config";
 import type { ScreenId } from "./router/types";
-import TabBar from "./components/TabBar";
+import TabBar from "./components/Tabbar";
 import "./styles/global.css";
 import "./styles/tokens.css";
 import "./styles/app.css";
